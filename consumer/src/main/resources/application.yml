@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    addresses: localhost
+    username: guest
+    password: guest
+    port: 5672
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 300s
+          max-interval: 300s
+server:
+  port: 8081
